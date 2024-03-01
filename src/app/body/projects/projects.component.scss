@@ -1,0 +1,71 @@
+
+.mainBox{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: x-large;
+    text-align: center;
+    .imgs{
+        box-shadow: rgba(17, 17, 26, 0.05) 0px 4px 16px, rgba(17, 17, 26, 0.05) 0px 8px 32px;
+        max-width: 400px;
+        max-height: 300px;
+        object-fit: contain;
+        border-radius: 10px;
+    }
+}
+
+h1{
+    margin-top: 120px;
+    font-size: 60px;
+    font-weight: 800;
+}
+
+.project{
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    width: 80vw;
+    margin-top: 120px;
+    .positionText{
+        margin: 40px;
+        margin-bottom: 0;
+        width: 40vw;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        .positionNumverRechts{
+            position: absolute;
+            right: 0;
+            top: 0;
+        }
+        .positionNumverLeft{
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+    }
+    .positionBtn{
+        margin: 40px;
+    }
+}
+
+a{
+    padding: 24px;
+    padding-top: 16px;
+    padding-bottom: 16px;
+    text-decoration: none;
+    border-radius: 30px;
+    border: 1px rgba(0, 0, 0, 0.2) solid;
+    color: black;
+    margin: 20px;
+    transition: 0.3s ease-in-out;
+    &:hover{
+        background-color: #5988FF;
+        color: white;
+        box-shadow: rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px, rgba(17, 17, 26, 0.1) 0px 24px 80px;
+    }
+}
+
+.rowReverse{
+    flex-direction: row-reverse !important;
+}

@@ -1,0 +1,42 @@
+
+.mainContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 100vh;
+    opacity: 1;
+    // scale: 0.5;
+    transform-origin: bottom;
+    animation: fadeOut linear forwards;
+    animation-timeline: view();
+    animation-range: exit 100px;
+
+    .headline{
+        font-size: 110px;
+        font-weight: 800;
+        text-align: center;
+        margin: 0;
+    }
+    img{
+        width: 400px;
+        height: 600px;
+        object-fit: contain;
+    }
+}
+
+.underLine{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 40px;
+    .nameLine{
+        color:#5988FF;
+        font-size: 40px;
+    }
+}
+
+@keyframes fadeOut {
+    to {opacity: 0; scale: 1.2;}
+}
+
