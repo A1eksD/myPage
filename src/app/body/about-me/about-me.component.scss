@@ -1,9 +1,10 @@
-.mainBox{
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly;
+@import './../../../styles.scss';
+
+.mainBox {
+    @include dFlex($jc: space-evenly);
     height: 48vh;
-    .imgProfileMsmall{
+
+    .imgProfileMsmall {
         max-width: 400px;
         max-height: 400px;
         object-fit: contain;
@@ -12,19 +13,21 @@
     }
 }
 
-.aboutMeBox{
-    max-width: 800px;
+.aboutMeBox {
+    @include dFlex();
+    flex-direction: column;
+    max-width: 40vw;
     height: auto;
-    .headline{
+
+    .headline {
         font-size: 60px;
         font-weight: 800;
         margin-bottom: 12px;
     }
 }
 
-.arrowDiv{
-    display: flex;
-    justify-content: flex-end;
+.arrowDiv {
+    @include dFlex($jc: flex-end);
     margin-right: 10vw;
     height: 200px;
 }

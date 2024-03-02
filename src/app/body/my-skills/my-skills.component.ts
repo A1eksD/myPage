@@ -8,6 +8,7 @@ import { Component } from '@angular/core';
   styleUrl: './my-skills.component.scss'
 })
 export class MySkillsComponent {
-  iconImgs = ["angular.png", "TS.png", "JS.png", "HTML.png", "CSS.png", "firebase.png", "git.png", "scrum.png", "restApi.png", "materialDesign.png"];
+  iconImgs = ["angular.svg", "typescript.svg", "javascript.svg", "html.svg", "css.svg", "firebase.svg", "git.svg", "scrum.svg", "API.svg"];
+  iconText = ["Angular", "TypeScript", "JavaScript", "HTML", "CSS", "Firebase", "git", "Scrum", "API"]
 
 }

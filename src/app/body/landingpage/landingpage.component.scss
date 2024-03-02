@@ -1,3 +1,4 @@
+@import './../../../styles.scss';
 
 .mainContainer{
     display: flex;
@@ -11,7 +12,6 @@
     animation: fadeOut linear forwards;
     animation-timeline: view();
     animation-range: exit 100px;
-
     .headline{
         font-size: 110px;
         font-weight: 800;
@@ -31,12 +31,13 @@
     align-items: center;
     height: 40px;
     .nameLine{
-        color:#5988FF;
+        color: $blue;
         font-size: 40px;
     }
 }
 
 @keyframes fadeOut {
     to {opacity: 0; scale: 1.2;}
+    
 }
 

@@ -11,7 +11,8 @@ import AOS from 'aos';
 })
 export class ProjectsComponent {
   imgs =[ 'joinWallpaper.png', 'sharkieWallpaper2.png', 'pokedexWallpaper.png'];
-
+  headline = ['Join', 'Sharkie', 'Pokedex'];
+  usedTechnics =['HTML | CSS | Javascript', 'HTML | CSS | Javascript', 'HTML | CSS | Javascript'];
   description = ['Task Manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories.',
                  'Play a little jump and run by helping little shark named Sharkie on his adventure.',
                  'Dive back in childhood and watch your favorite pokmons.'];
