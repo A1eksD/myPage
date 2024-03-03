@@ -7,8 +7,10 @@
         margin-top: 120px;
         font-size: 60px;
         font-weight: 800;
+        transition: 0.3s ease-in-out;
         &:hover{
             color: $blue;
+            cursor: url("../../../../src/assets/img/programm.png")16 16, auto;
         }
     }
 }
@@ -17,6 +19,7 @@
     @include dFlex();
     flex-direction: column;
     font-size: x-large;
+    margin-bottom: 200px;
     .imgs{
         box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
         max-width: 440px;
@@ -42,7 +45,6 @@
             position: absolute;
             right: 0;
             top: 0;
-            margin-right: 80px;
             .nrColor{
                 color: $blue;
             }
@@ -52,7 +54,6 @@
             position: absolute;
             left: 0;
             top: 0;
-            margin-left: 64px;
             .nrColor{
                 color: $blue;
             }

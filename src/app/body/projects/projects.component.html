@@ -5,8 +5,7 @@
     </div>
   @for(img of imgs; let i = $index; track i;){
     @if(i % 2 !== 0){
-      <!-- <div class="project" data-aos="fade-left" [ngClass]="{'rowReverse': i % 2 !== 0}"> -->
-      <div class="project rowReverse" data-aos="fade-left" data-aos-offset="500" data-aos-easing="ease-in-sine">
+      <div class="project rowReverse" data-aos="fade-left" data-aos-offset="300" data-aos-easing="ease-in-sine">
         <img class="imgs" src="assets/img/{{ img }}" alt="" />
         <div class="positionText fontOverpass">
           <div class="positionNumverLeft"><p class="nrColor">{{ nrOfProject[i] }}</p><p>/3</p></div>
@@ -22,7 +21,7 @@
         </div>
       </div>
     } @else {
-      <div class="project" data-aos="fade-right" data-aos-offset="500" data-aos-easing="ease-in-sine">
+      <div class="project" data-aos="fade-right" data-aos-offset="300" data-aos-easing="ease-in-sine">
         <img class="imgs" src="assets/img/{{ img }}" alt="" />
         <div class="positionText fontOverpass">
           <div class="positionNumverRechts"><p class="nrColor">{{ nrOfProject[i] }}</p><p>/3</p></div>
@@ -38,16 +37,5 @@
         </div>
       </div>
     }
-    <!-- <div class="project" data-aos="fade-up" data-aos-anchor-placement="center-center" [ngClass]="{'rowReverse': i % 2 !== 0}">
-      <img class="imgs" src="assets/img/{{ img }}" alt="" />
-      <div class="positionText fontOverpass">
-        <div class="positionNumverRechts">{{ nrOfProject[i] }}/3</div>
-        <span>{{ description[i] }}</span>
-        <div class="positionBtn">
-          <a href="#" class="fontOverpass">Live Test</a>
-          <a href="#" class="fontOverpass">GitHUB</a>
-        </div>
-      </div>
-    </div> -->
   }
 </div>

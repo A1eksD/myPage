@@ -1,0 +1,90 @@
+@import './../../../styles.scss';
+
+.mainBox {
+    background-image: url('./../../../assets/img/contactBackground.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100vw;
+    height: auto;
+
+    h1 {
+        font-size: 100px;
+        font-weight: 900;
+        color: white;
+        padding: 8vw;
+    }
+
+    h2 {
+        color: $blue;
+        font-size: x-large;
+        margin-bottom: 20px;
+        font-size: 26px;
+    }
+
+    h3 {
+        font-size: large;
+        margin-bottom: 20px;
+        color: white;
+        font-size: 18px;
+    }
+}
+
+@mixin inputStyle {
+    background-color: black;
+    width: 40vw;
+    height: 40px;
+    border: none;
+    border-bottom: 3px solid white;
+    padding: 20px;
+    margin: 20px;
+    transition: all 0.2s ease-in-out;
+    cursor: pointer;
+    font-size: 24px;
+    color: white;
+    font-family: 'Overpass';
+    outline: none;
+    border-radius: 40px;
+    &:hover {
+        outline: 3px solid white;
+        outline-offset: -3px;
+    }
+}
+
+
+
+form {
+    @include dFlex();
+    flex-direction: column;
+
+    #fname {
+        @include inputStyle();
+    }
+    #lname {
+        @include inputStyle();
+    }
+    #subject {
+        @include inputStyle();
+        margin-bottom: 40px;
+    }
+}
+
+::-webkit-input-placeholder {
+    color: white;
+    font-family: 'Overpass';
+}
+
+.clickInInput{
+    border: 2px solid white;
+    width: 40vw;
+    height: 40px;
+    background-color: black;
+    padding: 8px;
+    margin: 20px;
+    transition: all 0.2s ease-in-out;
+    cursor: pointer;
+    font-size: 18px;
+    color: white;
+    font-family: 'Overpass';
+}
+
+
