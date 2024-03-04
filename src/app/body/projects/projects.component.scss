@@ -30,8 +30,7 @@
 }
 
 .project{
-    @include dFlex();
-    align-items: flex-end;
+    @include dFlex($ai: flex-start);
     width: 80vw;
     margin-top: 120px;
     .positionText{

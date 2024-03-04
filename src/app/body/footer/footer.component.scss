@@ -1,0 +1,36 @@
+@import './../../../styles.scss';
+
+.mainBox{
+    @include dFlex($jc: space-between);
+    background-color: black;
+    color: white;
+    width: 100vw;
+    height: 200px;
+    span{
+        margin: 5vw;
+        font-size: larger;
+        font-family: 'Overpass'; 
+    }
+    .iconsPosition{
+        @include dFlex();
+        flex-direction: column;
+        // align-items: stretch;
+        margin: 5vw;
+        .imgPosition{
+            width: 220px;
+            @include dFlex($jc: space-evenly);
+            align-items: stretch;
+        }
+        a{
+            margin-top: 40px;
+            font-size: larger;
+            font-family: 'Overpass';
+            text-decoration: none;
+            color: $blue;
+        }
+    }
+}
+
+img{
+    cursor: pointer;
+}
