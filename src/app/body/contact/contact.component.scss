@@ -12,6 +12,11 @@
         font-weight: 900;
         color: white;
         padding: 8vw;
+        transition: 0.3s ease-in-out;
+        &:hover{
+            color: $blue;
+            cursor: default;
+        }
     }
 
     h2 {
@@ -29,10 +34,10 @@
     }
     .positionImg{
         width: 100vw;
-        display: flex;
-        justify-content: flex-end;
+        @include dFlex($jc: flex-end);
         img{
-            margin: 6vw;
+            margin: 5vw;
+            height: 120px;
             cursor: pointer;
             transition: transform 0.2s ease-in-out;
             transform-origin: bottom;
@@ -79,8 +84,12 @@ form {
     }
     #message {
         @include inputStyle();
-        margin-bottom: 40px;
     }
+}
+
+.clickedInput{
+    transition: all 0.1s ease-in-out;
+    border: 2px solid white !important;
 }
 
 ::-webkit-input-placeholder {
@@ -103,7 +112,25 @@ form {
 }
 
 
+.aktivButton[type=submit]{
+    cursor: pointer;
+    padding: 24px;
+    padding-top: 16px;
+    padding-bottom: 16px;
+    text-decoration: none;
+    border-radius: 30px;
+    background-color: rgba(255, 255, 255, 0.5);
+    border: 1px rgba(0, 0, 0, 0.2) solid;
+    color: black;
+    margin: 20px;
+    font-size: 24px;
+    font-family: 'Overpass';
+    transition: 0.3s ease-in-out;
+
+}
+
 .submitBtn[type=submit]{
+    cursor: pointer;
     padding: 24px;
     padding-top: 16px;
     padding-bottom: 16px;
@@ -124,6 +151,8 @@ form {
 
 }
 
+
+
 .privacyPosition{
     @include dFlex();
     width: 40vw;
@@ -143,9 +172,37 @@ form {
             }
         }
         img{
+            cursor: pointer;
             margin-right: 12px;
-            margin-bottom: -2px;
+            margin-bottom: -3px;
+            &:hover {
+                & ~ a {
+                    filter: drop-shadow(0 0 0.75rem white);
+                }
+            }
         }
     }
 }
+
+.warningDiv{
+    width: 40vw;
+    @include dFlex($jc: space-between);
+    .warningText{
+        color: red;
+        font-family: 'Overpass';
+        text-align: left;
+    }
+    .warningIcon{
+        position: relative;
+        top: -76px;
+        right: -56px;
+    }
+}
+
+.rightIcon{
+    position: relative;
+        top: -76px;
+        right: -56px;
+}
+
 

@@ -1,6 +1,13 @@
 @import './../../../styles.scss';
+ 
+.divHeight{
+    height: 100vh;
+    width: 100vw;
+    @include dFlex();
+}
 
 .mainBox{
+
     margin: 8vw;
     border: 3px black solid;
     border-radius: 28px;
@@ -15,6 +22,11 @@
         padding-left: 32px;
         padding-right: 32px;
         background-color: white;
+        transition: 0.3s ease-in-out;
+        &:hover{
+            color: $blue;
+            cursor: default;
+        }
     }
 }
 
@@ -45,9 +57,3 @@
     }
 }
 
-.arrowDiv{
-    display: flex;
-    justify-content: flex-start;
-    margin-left: 10vw;
-    height: 200px;
-}

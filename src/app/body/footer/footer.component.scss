@@ -7,14 +7,12 @@
     width: 100vw;
     height: 200px;
     span{
-        margin: 5vw;
         font-size: larger;
         font-family: 'Overpass'; 
     }
     .iconsPosition{
         @include dFlex();
         flex-direction: column;
-        // align-items: stretch;
         margin: 5vw;
         .imgPosition{
             width: 220px;
@@ -28,9 +26,42 @@
             text-decoration: none;
             color: $blue;
         }
+        .legalNotice{
+            &:hover{
+                filter: drop-shadow(0 0 0.75rem white);
+            }
+        }
     }
 }
 
-img{
+img {
     cursor: pointer;
+    transition: transform 0.2s ease-in-out, filter 0.2s ease-in-out;
+  
+    &:hover {
+      transform: scale(1.5);
+      filter: drop-shadow(0 0 3px #4fbeff); /* Corrected filter */
+    }
 }
+  
+.iconAndName{
+    @include dFlex($ai: flex-start);
+    flex-direction: column;
+    margin-left: 5vw;
+    .ADicon{
+        width: 56px;
+        height: 56px;
+        object-fit: cover;
+        margin-bottom: 20px;
+        transform-origin: bottom left;
+        background-image: url("../../../assets/img/ADwhite.svg");
+        background-size: cover;
+        background-repeat: no-repeat;
+        transition: transform 0.2s ease-in-out;
+        &:hover{
+            transform: scale(1.2);
+            filter: none;
+        }
+    }
+}
+

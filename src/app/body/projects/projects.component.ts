@@ -16,7 +16,7 @@ export class ProjectsComponent {
   description = ['Task Manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories.',
                  'Play a little jump and run by helping little shark named Sharkie on his adventure.',
                  'Dive back in childhood and watch your favorite pokmons.'];
-
+  links = ['https://github.com/A1eksD/Join', 'https://github.com/A1eksD/Sharkie', 'https://github.com/A1eksD/my-Pokedex.git'];
   nrOfProject = [ 1, 2, 3];
 
   

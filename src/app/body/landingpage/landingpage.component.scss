@@ -1,13 +1,13 @@
 @import './../../../styles.scss';
 
+
 .mainContainer{
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
-    height: 100vh;
+    height: calc(100vh - 100px);
     opacity: 1;
-    // scale: 0.5;
     transform-origin: bottom;
     animation: fadeOut linear forwards;
     animation-timeline: view();
@@ -30,6 +30,7 @@
     justify-content: space-evenly;
     align-items: center;
     height: 40px;
+    overflow-y: hidden;
     .nameLine{
         color: $blue;
         font-size: 40px;

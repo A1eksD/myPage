@@ -1,15 +1,14 @@
-<div class="mainBox">
-    <p class="fontSyne">My Skills</p>
-    <div class="positionIcons">
-        @for(img of iconImgs; let i = $index; track i;){
-            <div class="dFlex">
-                <img class="iconImgs" src="assets/img/{{iconImgs[i]}}" alt="">
-                <h3 class="fontOverpass">{{ iconText[i]}}</h3>
-            </div>
-        }
+<div class="divHeight" id="mySkills">
+    <div class="mainBox">
+        <p class="fontSyne">My Skills</p>
+        <div class="positionIcons">
+            @for(img of iconImgs; let i = $index; track i;){
+                <div class="dFlex">
+                    <img class="iconImgs" src="assets/img/{{iconImgs[i]}}" alt="">
+                    <h3 class="fontOverpass">{{ iconText[i]}}</h3>
+                </div>
+            }
+        </div>
     </div>
-</div>
-<div class="arrowDiv">
-    <img src="assets/img/arrowDownRight.png" alt="">
 </div>
     

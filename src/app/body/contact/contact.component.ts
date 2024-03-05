@@ -1,17 +1,43 @@
+import { CommonModule } from '@angular/common';
 import { HttpClient } from '@angular/common/http';
 import { Component, inject } from '@angular/core';
 import { FormsModule, NgForm } from '@angular/forms';
+import { BrowserModule } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-contact',
   standalone: true,
-  imports: [FormsModule],
+  imports: [FormsModule, CommonModule],
   templateUrl: './contact.component.html',
   styleUrl: './contact.component.scss'
 })
 export class ContactComponent {
 
   http = inject(HttpClient);
+
+  checkedIconImg = true;
+
+  test = false;
+  checkButton = false;
+
+  isChecked = false;
+  unchecked = 'check_box_outline_blank.svg';
+  checked = 'check_box.svg';
+
+  checkIfAgree(){
+    this.isChecked = !this.isChecked;
+  }
+
+  checkBtn() {
+    if (!this.isChecked) {
+      this.test = true;
+      console.log(this.test);
+    } else {
+      this.test = false;
+      console.log(this.test);
+    }
+  }
+  
 
   contactData = {
     name: "",

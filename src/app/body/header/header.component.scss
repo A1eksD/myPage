@@ -5,10 +5,12 @@
   @include dFlex($jc: space-between);
   border-bottom: 1px;
   height: 100px;
-  position: absolute;
+  position: fixed;
+  background: white;
   top: 0;
   left: 0;
-  width: 100%;
+  right: 0;
+  width: 100vw;
   z-index: 5;
 
   div {
@@ -36,4 +38,11 @@
     font-style: italic;
     margin-left: 4vw;
   }
+}
+
+img{
+  width: 56px;
+  height: 56px;
+  object-fit: cover;
+  margin-left: 5vw;
 }
