@@ -27,16 +27,6 @@ export class ContactComponent {
   checkIfAgree(){
     this.isChecked = !this.isChecked;
   }
-
-  checkBtn() {
-    if (!this.isChecked) {
-      this.test = true;
-      console.log(this.test);
-    } else {
-      this.test = false;
-      console.log(this.test);
-    }
-  }
   
 
   contactData = {

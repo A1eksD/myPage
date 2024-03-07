@@ -16,8 +16,7 @@
         margin: 5vw;
         .imgPosition{
             width: 220px;
-            @include dFlex($jc: space-evenly);
-            align-items: stretch;
+            @include dFlex($jc: space-evenly, $ai: center);
         }
         a{
             margin-top: 40px;
@@ -40,7 +39,7 @@ img {
   
     &:hover {
       transform: scale(1.5);
-      filter: drop-shadow(0 0 3px #4fbeff); /* Corrected filter */
+      filter: drop-shadow(0 0 3px #4fbeff);
     }
 }
   

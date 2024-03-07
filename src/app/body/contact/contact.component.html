@@ -19,11 +19,7 @@
                     <img class="warningIcon" src="assets/img/warning.svg" alt="">
                 </div>
             }
-            <!-- @else if (email.valid && !email.touched && email.disabled) {
-                <div class="warningDiv">
-                    <img class="rightIcon" src="assets/img/rightIcon.svg" alt="">
-                </div>
-            } -->
+
 
         <textarea #message="ngModel"  [(ngModel)]="contactData.message" id="message" name="message" placeholder="Write something.." style="height:200px" required [ngClass]="{'clickedInput': message.valid && message.touched}"></textarea>
             @if (!message.valid && message.touched && !message.disabled) {
@@ -32,21 +28,13 @@
                     <img class="warningIcon" src="assets/img/warning.svg" alt="">
                 </div>
             } 
-            <!-- @else if (message.valid ) {
-                <div class="warningDiv">
-                    <img class="rightIcon" src="assets/img/rightIcon.svg" alt="">
-                </div>
-            } -->
+
         
         <div class="privacyPosition">
             <p><img (click)="checkIfAgree()" id="checkIcon" src="assets/img/{{ isChecked? 'check_box.svg' : 'check_box_outline_blank.svg' }}">
-                I've read the <a href="#">privacy policy</a> and agree tho the prosessing of my data as outlinked</p>
+                I've read the <a href="legalNotice">privacy policy</a> and agree tho the prosessing of my data as outlinked</p>
         </div>
-        @if (!isChecked && name.valid && message.valid&& email.valid) {
-            <div class="warningDiv">
-                <span class="warningText">Please accept the privacy policy.</span>
-            </div>
-        } 
+
         <input type="submit" value="Submit" class="aktivButton"  [ngClass]="{'submitBtn': isChecked && name.valid && message.valid&& email.valid }" [disabled]="!isChecked">
 
 

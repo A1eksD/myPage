@@ -1,3 +1,4 @@
+import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 
 @Component({
@@ -9,5 +10,9 @@ import { Component } from '@angular/core';
 })
 export class FooterComponent {
   icons = ["gitHub.svg", "mail.svg", "linktIn.svg"];
-  links = ["https://github.com/A1eksD", "#", "https://www.linkedin.com/in/aleksander-demyanovych-4490542b3/"];
+  links = ["https://github.com/A1eksD", "mailto:aleks444@gmx.de", "https://www.linkedin.com/in/aleksander-demyanovych-4490542b3/"];
+
+  shwoLegalNotes(){
+    
+  }
 }

@@ -18,11 +18,10 @@
         text-align: center;
         margin: 0;
     }
-    img{
-        width: 400px;
-        height: 600px;
+    img {
+        width: 440px;
         object-fit: contain;
-    }
+    }    
 }
 
 .underLine{
@@ -35,6 +34,9 @@
         color: $blue;
         font-size: 40px;
     }
+    .lineImg{
+        width: 400px;
+    }
 }
 
 @keyframes fadeOut {
@@ -42,3 +44,21 @@
     
 }
 
+
+.example-container {
+    width: 500px;
+    height: 300px;
+    border: 1px solid rgba(0, 0, 0, 0.5);
+  }
+  
+  .example-sidenav-content {
+    display: flex;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .example-sidenav {
+    padding: 20px;
+  }
+  

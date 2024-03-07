@@ -1,0 +1,35 @@
+@import './../../styles.scss';
+
+@mixin fontstyle(){
+    h1, h2, h3{
+        text-align: center;
+        font-family: 'Syne';
+        margin: 26px;
+        color: #5988FF;
+    }
+    p, a{
+        font-family: 'Overpass';
+        text-decoration: none;
+    }
+}
+
+.mainBox{
+    width: 100vw;
+    height: auto;
+    @include dFlex();
+    flex-direction: column;
+    text-align: center;
+}
+.datenschutz{
+    text-align: left;
+    @include fontstyle();
+}
+
+.impressum{
+    margin: 40px;
+    @include fontstyle();
+    p, a{
+        font-family: 'Overpass';
+        text-decoration: none;
+    }
+}
