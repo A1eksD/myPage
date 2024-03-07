@@ -11,14 +11,15 @@
     margin: 8vw;
     border: 3px black solid;
     border-radius: 28px;
-    width: calc(100vw - 16vw);
+    width: 82vw;
     height: auto;
     @include dFlex();
     flex-direction: column;
     p{
         font-size: 60px;
         font-weight: 800;
-        margin-top: -42px;
+        margin-top: -40px;
+        margin-bottom: 22px;
         padding-left: 32px;
         padding-right: 32px;
         background-color: white;
@@ -32,9 +33,9 @@
 
 .positionIcons{
     max-width: 94vw;
-    @include dFlex($jc: space-around);
+    @include dFlex($jc: space-around, $g: 72px);
     flex-wrap: wrap;
-    gap: 100px;
+    gap: 80px;
     .dFlex{
         @include dFlex();
         flex-direction: column;

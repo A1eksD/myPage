@@ -13,8 +13,8 @@
     animation-timeline: view();
     animation-range: exit 100px;
     .headline{
-        font-size: 110px;
-        font-weight: 800;
+        font-size: 110px !important;
+        font-weight: 800 !important;
         text-align: center;
         margin: 0;
     }

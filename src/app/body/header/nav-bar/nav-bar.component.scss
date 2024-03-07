@@ -1,0 +1,29 @@
+@import "../../../../../node_modules/bootstrap/dist/css/bootstrap.css";
+
+img{
+    cursor: pointer;
+    width: 48px;
+    height: 48px;
+    object-fit: contain;
+    z-index: 40;
+    transition: 0.3s ease-in-out;
+}
+
+.boxWithLinks{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    gap: 80px;
+    position: fixed;
+    bottom: 0;
+    top: 100px;
+    width: 100vw;
+    z-index: 10;
+    background-color: chartreuse;
+    a{
+        font-size: 56px;
+        font-weight: 800;
+        font-family: 'Overpass';
+    }
+}

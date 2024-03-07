@@ -5,24 +5,11 @@
         <a href="#mySkills">My skills</a>
         <a href="#myProjects">My Projects</a>
         <a href="#contact">Contact</a>
+        <img (click)="showSideMenu()" src="./assets/img/{{ showFiller? 'iconsMenu.png' : 'iconsX.png' }}" alt="iconsMenu" 
+            style="transition: 0.3s ease-in-out;" class="navBarIcon">
+       
     </div>
 </div>
-
-<mat-drawer-container class="example-container" autosize>
-    <mat-drawer #drawer class="example-sidenav" mode="side">
-      <p>Auto-resizing sidenav</p>
-      @if (showFiller) {
-        <p>Lorem, ipsum dolor sit amet consectetur.</p>
-      }
-      <button (click)="showFiller = !showFiller" mat-raised-button>
-        Toggle extra text
-      </button>
-    </mat-drawer>
-  
-    <div class="example-sidenav-content">
-      <button type="button" mat-button (click)="drawer.toggle()">
-        Toggle sidenav
-      </button>
-    </div>
-  
-  </mat-drawer-container>
+@if (!showFiller) {
+    <app-nav-bar class="navBar"></app-nav-bar>
+}
