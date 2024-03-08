@@ -1,9 +1,5 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
-import { MatSidenavModule } from '@angular/material/sidenav';
-import { MatButtonModule } from '@angular/material/button';
-import { BrowserAnimationsModule, NoopAnimationsModule } from '@angular/platform-browser/animations';
-import { BrowserModule } from '@angular/platform-browser';
 import { NavBarComponent } from './nav-bar/nav-bar.component';
 
 @Component({
@@ -16,8 +12,20 @@ import { NavBarComponent } from './nav-bar/nav-bar.component';
 export class HeaderComponent {
   showFiller = false;
   
-  showSideMenu(){
+  showSideMenu() {
     this.showFiller = !this.showFiller;
+    this.closeNB();
+  }
+
+  closeNB(){
+    console.log('-------');
+    console.log(this.showFiller);
+    
+    if (this.showFiller) {
+      document.getElementById('menuIcon')?.classList.add('closeNavB');
+    } else {
+      document.getElementById('menuIcon')?.classList.remove('closeNavB');
+    }
   }
 }
 

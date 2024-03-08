@@ -1,7 +1,6 @@
 import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
+
 
 
 @Component({
@@ -12,15 +11,30 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
   styleUrl: './nav-bar.component.scss'
 })
 export class NavBarComponent {
-  isChecked = true;
-  // bootstrapApplication(NavBarComponent, {
-  //   providers: [
-  //     provideAnimations(),
-  //   ]
-  // }); 
+  
+  @Input()showFiller = true;
 
+  @Output()closeNavigationBar = new EventEmitter<boolean>();
 
-  showSideMenu(){
-    this.isChecked = !this.isChecked;
+  constructor(){
+    setInterval(() => {
+      console.log(this.showFiller);
+    }, 2000)
   }
+
+  closeNavBar(){
+    this.closeNavigationBar.emit(this.showFiller);
+    // this.closeNB();   
+  }
+
+  // closeNB(){
+  //   console.log('-------');
+  //   console.log(this.showFiller);
+  
+  //   if (!this.showFiller) {
+  //     document.getElementById('menuIcon')?.classList.add('closeNavB');
+  //   } else {
+  //     document.getElementById('menuIcon')?.classList.remove('closeNavB');
+  //   }
+  // }
 }

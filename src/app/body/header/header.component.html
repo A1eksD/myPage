@@ -5,11 +5,12 @@
         <a href="#mySkills">My skills</a>
         <a href="#myProjects">My Projects</a>
         <a href="#contact">Contact</a>
-        <img (click)="showSideMenu()" src="./assets/img/{{ showFiller? 'iconsMenu.png' : 'iconsX.png' }}" alt="iconsMenu" 
-            style="transition: 0.3s ease-in-out;" class="navBarIcon">
-       
+        <img (click)="showSideMenu()" src="./assets/img/{{ showFiller? 'iconsX.png' : 'iconsMenu.png'}}" alt="iconsMenu" 
+            class="navBarIcon">
     </div>
 </div>
-@if (!showFiller) {
-    <app-nav-bar class="navBar"></app-nav-bar>
+@if (showFiller) {
+    <!-- <app-nav-bar (closeNavigationBar)="showSideMenu()" [ngClass]="{'closeNavB': showFiller}"></app-nav-bar> -->
+    <app-nav-bar (closeNavigationBar)="showSideMenu()" id="menuIcon"></app-nav-bar>
 }
+  
