@@ -67,9 +67,9 @@ img{
   padding: 20px;
 }
 
-// .navBar{
-//   display: none;
-// }
+.navBar{
+  display: none;
+}
 
 @media (max-width: 1000px) {
   a{
@@ -83,13 +83,13 @@ img{
     margin: 40px;
   }
 
-  // .navBar {
-  //   display: block;
-  // }  
+  .navBar {
+    display: block;
+  }  
 }
 
 .closeNavB{
-  animation: hideNav 0.5s ease-in-out forwards;
+  animation: hideNav 0.5s ease-in-out backwards;
 }
 
 @keyframes hideNav {
@@ -98,7 +98,7 @@ img{
   }
 
   100% {
-      transform: translateY(100%);
+      transform: translateY(-100%);
   }
 }
 

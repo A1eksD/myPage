@@ -21,10 +21,12 @@ export class HeaderComponent {
     console.log('-------');
     console.log(this.showFiller);
     
-    if (this.showFiller) {
+    if (!this.showFiller) {
       document.getElementById('menuIcon')?.classList.add('closeNavB');
+      console.log('wwwwwww');
     } else {
       document.getElementById('menuIcon')?.classList.remove('closeNavB');
+      console.log('ccccccc');
     }
   }
 }
