@@ -1,8 +1,10 @@
 <div class="mainBox" id="contact">
     <h1 class="fontSyne">Say Hi!</h1>
     <form class="contactInputPosition" (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm">
-        <h2 class="fontOverpass">Want to discuss a new project?</h2>
-        <h3 class="fontOverpass">Then let's discuss your ideas and make it happen.</h3>
+        <div class="contactHeader">
+            <h2 class="fontOverpass">Want to discuss a new project?</h2>
+            <h3 class="fontOverpass">Then let's discuss your ideas and make it happen.</h3>
+        </div>
 
         <input #name="ngModel" [(ngModel)]="contactData.name" type="text" id="name" name="name" placeholder="Your name.." required  [ngClass]="{'clickedInput': name.valid && name.touched}">
             @if (!name.valid && name.touched && !name.disabled) {

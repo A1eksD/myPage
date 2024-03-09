@@ -3,6 +3,7 @@
 .mainBox{
     @include dFlex($jc: space-between);
     background-color: black;
+    border: none;
     color: white;
     width: 100vw;
     height: 200px;
@@ -60,6 +61,21 @@ img {
         &:hover{
             transform: scale(1.2);
             filter: none;
+        }
+    }
+}
+
+@media (max-width: 1000px) {
+    body {
+        overflow-x: hidden;
+    }
+}
+@media (max-width: 660px) {
+    .mainBox{
+        .iconsPosition{
+            .imgPosition{
+                width: 120px;
+            }
         }
     }
 }

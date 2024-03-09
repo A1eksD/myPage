@@ -1,6 +1,6 @@
 
-<!-- <div class="boxWithLinks" [ngClass]="{'closeNavB': showFiller}"> -->
-<div class="boxWithLinks">
+
+<div class="boxWithLinks test" [ngClass]="{'closeNavB': !showFiller, 'showNavBar' : showFiller}">
   <a class="nav-link active" aria-current="page" href="#aboutMe" (click)="closeNavBar()">About Me</a>
   <a class="nav-link" href="#mySkills" (click)="closeNavBar()">My Skills</a>
   <a class="nav-link" href="#myProjects" (click)="closeNavBar()">Portfolio</a>

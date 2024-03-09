@@ -7,7 +7,6 @@
 }
 
 .mainBox{
-
     margin: 8vw;
     border: 3px black solid;
     border-radius: 28px;
@@ -53,6 +52,48 @@
         }
         h3{
             margin-bottom: 12px;
+        }
+    }
+}
+
+@media (max-width: 1000px) {
+    body {
+        overflow-x: hidden;
+    }
+    .mainBox{
+        p {
+            font-size: 46px;
+            margin-top: -32px;
+        }
+    }
+
+    .positionIcons{
+        @include dFlex($g: 26px);
+        .dFlex{
+            .iconImgs{
+                width: 46px;
+                height: 46px;
+            }
+        }
+    }
+}
+@media (max-width: 660px) {
+    .mainBox{
+        p {
+            font-size: 27px;
+            margin-top: -22px;
+            padding-left: 14px;
+            padding-right: 14px;
+        }
+    }
+
+    .positionIcons{
+        @include dFlex($g: 26px);
+        .dFlex{
+            .iconImgs{
+                width: 46px;
+                height: 46px;
+            }
         }
     }
 }

@@ -3,6 +3,7 @@
 
 .headline{
     text-align: center;
+    width: 100vw;
     h1{
         margin-top: 120px;
         font-size: 60px;
@@ -20,6 +21,7 @@
     flex-direction: column;
     font-size: x-large;
     margin-bottom: 200px;
+    width: 100vw;
     .imgs{
         box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
         max-width: 440px;
@@ -89,4 +91,117 @@ a{
 
 .rowReverse{
     flex-direction: row-reverse !important;
+}
+
+
+@media (max-width: 1300px) {
+    body {
+        overflow-x: hidden;
+    }
+    .dRow{
+        display: flex;
+        align-items: flex-start;
+    }
+
+    .headline{
+        h1{
+            font-size: 46px;
+        }
+        span{
+            font-size: 20px;
+        }
+    }
+
+    .mainBox{
+        .imgs{
+            max-width: 360px;
+            max-height: 280px;
+            object-fit: contain;
+        }
+    }
+
+    .project{
+        display: flex;
+        flex-direction: column !important;
+        align-items: center;
+        text-align: center;
+        .positionText{
+            width: 80vw;
+        }
+        .positionBtn{
+            margin: 40px;
+        }
+        h1{
+            font-size: 36px;
+        }
+        h3{
+            font-size: 22px;
+        }
+        span{
+            font-size: 18px;
+        }
+    }
+
+    a{
+        font-size: 18px;
+        padding: 16px;
+        padding-top: 8px;
+        padding-bottom: 8px;
+        text-decoration: none;
+        margin: 8px;
+    }
+}
+
+@media (max-width: 660px) {
+
+    .headline{
+        h1{
+            font-size: 32px;
+        }
+        span{
+            font-size: 16px;
+            // margin: 16px;
+            text-align: center;
+        }
+    }
+
+    .mainBox{
+        .imgs{
+            max-width: 280px;
+        }
+    }
+
+    .project{
+        .positionText{
+            width: 80vw;
+            .positionNumverRechts{
+                top: -32px;
+            }
+            .positionNumverLeft{
+                top: -32px;
+            }
+        }
+        .positionBtn{
+            margin: 0;
+            margin-top: 12px;
+        }
+        h1{
+            font-size: 36px;
+        }
+        h3{
+            font-size: 22px;
+        }
+        span{
+            font-size: 18px;
+        }
+    }
+
+    a{
+        font-size: 18px;
+        padding: 16px;
+        padding-top: 8px;
+        padding-bottom: 8px;
+        text-decoration: none;
+        margin: 8px;
+    }
 }

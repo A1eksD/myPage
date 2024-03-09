@@ -1,64 +1,139 @@
 @import './../../../styles.scss';
 
-
-.mainContainer{
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.mainContainer {
+    @include dFlex();
     text-align: center;
     height: calc(100vh - 100px);
+    margin-top: 100px;
     opacity: 1;
     transform-origin: bottom;
     animation: fadeOut linear forwards;
     animation-timeline: view();
     animation-range: exit 100px;
-    .headline{
-        font-size: 110px !important;
-        font-weight: 800 !important;
+    margin-bottom: 80px;
+    .headline {
+        font-size: 110px;
+        font-weight: 800;
         text-align: center;
         margin: 0;
     }
-    img {
+
+    .profileImg {
         width: 440px;
         object-fit: contain;
-    }    
+    }
 }
 
-.underLine{
+.underLine {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
     height: 40px;
     overflow-y: hidden;
-    .nameLine{
+
+    .nameLine {
         color: $blue;
         font-size: 40px;
     }
-    .lineImg{
+
+    .lineImg {
         width: 400px;
     }
 }
 
 @keyframes fadeOut {
-    to {opacity: 0; scale: 1.2;}
-    
+    to {
+        opacity: 0;
+        scale: 0.9;
+    }
 }
-
 
 .example-container {
     width: 500px;
     height: 300px;
     border: 1px solid rgba(0, 0, 0, 0.5);
-  }
-  
-  .example-sidenav-content {
+}
+
+.example-sidenav-content {
     display: flex;
     height: 100%;
     align-items: center;
     justify-content: center;
-  }
-  
-  .example-sidenav {
+}
+
+.example-sidenav {
     padding: 20px;
-  }
-  
+}
+
+@media (max-width: 1400px) {
+    body {
+        overflow-x: hidden;
+    }
+    .mainContainer {
+
+        .headline {
+            font-size: 72px;
+        }
+
+        .profileImg {
+            width: 400px;
+            margin-top: 24px;
+            margin-left: 40px;
+        }
+    }
+    .underLine {
+        .nameLine {
+            font-size: 28px;
+        }
+
+        .lineImg {
+            width: 220px;
+            margin-right: 12px;
+        }
+    }
+}
+
+@media (max-width: 1000px) {
+    .mainContainer {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 80px;
+
+        .headline {
+            font-size: 72px;
+        }
+
+        .profileImg {
+            width: 300px;
+            margin: 0;
+            margin-top: 24px;
+        }
+    }
+}
+
+
+@media (max-width: 660px) {
+    .mainContainer {
+        margin-top: 60px;
+        .headline {
+            font-size: 36px;
+        }
+
+        .profileImg {
+            width: 260px;
+            margin: 0;
+            margin-top: 12px;
+        }
+    }
+
+    .underLine {
+        .nameLine {
+            font-size: 22px;
+        }
+
+        .lineImg {
+            display: none;
+        }
+    }
+}

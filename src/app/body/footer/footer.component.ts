@@ -9,7 +9,7 @@ import { Component } from '@angular/core';
   styleUrl: './footer.component.scss'
 })
 export class FooterComponent {
-  icons = ["gitHub.svg", "mail.svg", "linktIn.svg"];
+  icons = ["gitHubSmall.svg", "mail.svg", "linktIn.svg"];
   links = ["https://github.com/A1eksD", "mailto:aleks444@gmx.de", "https://www.linkedin.com/in/aleksander-demyanovych-4490542b3/"];
 
   shwoLegalNotes(){

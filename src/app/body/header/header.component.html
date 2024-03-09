@@ -1,16 +1,18 @@
 <div class="mainBox" id="header">
-    <img src="./assets/img/ADblack.svg" alt="AD Icon">
+    <img src="./assets/img/ADblack.svg" alt="AD Icon" class="adIcon">
     <div>
         <a href="#aboutMe">About me</a>
         <a href="#mySkills">My skills</a>
         <a href="#myProjects">My Projects</a>
         <a href="#contact">Contact</a>
-        <img (click)="showSideMenu()" src="./assets/img/{{ showFiller? 'iconsX.png' : 'iconsMenu.png'}}" alt="iconsMenu" 
-            class="navBarIcon">
+        <img (click)="showSideMenu()" src="./assets/img/{{ showFiller? 'iconsX.png' : 'iconsMenu.png'}}" alt="iconsMenu" class="navBarIcon">
     </div>
 </div>
-@if (showFiller) {
-    <!-- <app-nav-bar (closeNavigationBar)="showSideMenu()" [ngClass]="{'closeNavB': showFiller}"></app-nav-bar> -->
-    <app-nav-bar (closeNavigationBar)="showSideMenu()" id="menuIcon"></app-nav-bar>
-}
-  
+
+<div class="boxWithLinks" [ngClass]="{'closeNavB': !showFiller, 'showNavBar' : showFiller}">
+    <a class="navLink active" aria-current="page" href="#aboutMe" (click)="showSideMenu()">About Me</a>
+    <a class="navLink" href="#mySkills" (click)="showSideMenu()">My Skills</a>
+    <a class="navLink" href="#myProjects" (click)="showSideMenu()">Portfolio</a>
+    <a class="navLink" href="#contact"(click)="showSideMenu()">Contact</a>
+</div>
+

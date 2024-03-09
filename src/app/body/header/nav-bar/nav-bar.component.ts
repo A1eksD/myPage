@@ -13,28 +13,19 @@ import { Component, EventEmitter, Input, Output } from '@angular/core';
 export class NavBarComponent {
   
   @Input()showFiller = true;
-
   @Output()closeNavigationBar = new EventEmitter<boolean>();
 
+
+  test: boolean  = false;
+
   constructor(){
-    setInterval(() => {
-      console.log(this.showFiller);
-    }, 2000)
+    console.log(this.showFiller);
+    // this.toggleValue();
   }
 
   closeNavBar(){
-    this.closeNavigationBar.emit(this.showFiller);
-    // this.closeNB();   
+    this.closeNavigationBar.emit(this.showFiller); 
+    console.log("-----------",this.closeNavigationBar);
+    
   }
-
-  // closeNB(){
-  //   console.log('-------');
-  //   console.log(this.showFiller);
-  
-  //   if (!this.showFiller) {
-  //     document.getElementById('menuIcon')?.classList.add('closeNavB');
-  //   } else {
-  //     document.getElementById('menuIcon')?.classList.remove('closeNavB');
-  //   }
-  // }
 }

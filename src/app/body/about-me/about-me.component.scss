@@ -3,7 +3,7 @@
 .mainBox {
     @include dFlex($jc: space-evenly);
     height: 100vh;
-
+    width: 100vw;
     .imgProfileMsmall {
         max-width: 320px;
         object-fit: contain;
@@ -30,5 +30,52 @@
     }
     .aboutMeText{
         font-size: x-large;
+    }
+}
+
+@media (max-width: 1000px) {
+    body {
+        overflow-x: hidden;
+    }
+    .aboutMeBox {
+        h1{
+            font-size: 46px;
+        }
+    }
+
+    .mainBox {
+        .imgProfileMsmall {
+            max-width: 280px;
+        }
+    }
+}
+
+@media (max-width: 660px) {
+    .mainBox {
+        flex-direction: column;
+        justify-content: center;
+    }
+
+
+    .aboutMeBox {
+        margin-top: 40px;
+        max-width: 80vw;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        h1{
+            font-size: 32px;
+            margin-bottom: 12px;
+        }
+        .aboutMeText{
+            font-size: large;
+        }
+    }
+
+    .mainBox {
+        .imgProfileMsmall {
+            max-width: 200px;
+        }
     }
 }

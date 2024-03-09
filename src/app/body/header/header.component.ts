@@ -14,20 +14,7 @@ export class HeaderComponent {
   
   showSideMenu() {
     this.showFiller = !this.showFiller;
-    this.closeNB();
   }
 
-  closeNB(){
-    console.log('-------');
-    console.log(this.showFiller);
-    
-    if (!this.showFiller) {
-      document.getElementById('menuIcon')?.classList.add('closeNavB');
-      console.log('wwwwwww');
-    } else {
-      document.getElementById('menuIcon')?.classList.remove('closeNavB');
-      console.log('ccccccc');
-    }
-  }
 }
 
