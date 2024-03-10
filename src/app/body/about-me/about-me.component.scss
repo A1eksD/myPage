@@ -34,9 +34,6 @@
 }
 
 @media (max-width: 1000px) {
-    body {
-        overflow-x: hidden;
-    }
     .aboutMeBox {
         h1{
             font-size: 46px;
@@ -58,7 +55,7 @@
 
 
     .aboutMeBox {
-        margin-top: 40px;
+        margin-top: 12px;
         max-width: 80vw;
         display: flex;
         flex-direction: column;
@@ -76,6 +73,7 @@
     .mainBox {
         .imgProfileMsmall {
             max-width: 200px;
+            margin-top: 50px;
         }
     }
 }

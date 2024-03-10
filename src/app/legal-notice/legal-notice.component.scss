@@ -21,6 +21,8 @@
     text-align: center;
 }
 .datenschutz{
+    width: 100vw;
+    margin: 26px;
     text-align: left;
     @include fontstyle();
 }
@@ -31,5 +33,14 @@
     p, a{
         font-family: 'Overpass';
         text-decoration: none;
+    }
+}
+
+@media (max-width: 800px) {
+    h1, h2, h3{
+        font-size: 20px;
+    }
+    p, a{
+        font-size: 16px;
     }
 }

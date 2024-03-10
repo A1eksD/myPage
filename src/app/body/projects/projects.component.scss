@@ -95,9 +95,6 @@ a{
 
 
 @media (max-width: 1300px) {
-    body {
-        overflow-x: hidden;
-    }
     .dRow{
         display: flex;
         align-items: flex-start;
@@ -157,10 +154,10 @@ a{
     .headline{
         h1{
             font-size: 32px;
+            margin-top: 58px;
         }
         span{
             font-size: 16px;
-            // margin: 16px;
             text-align: center;
         }
     }

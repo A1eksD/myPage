@@ -4,7 +4,7 @@
   }
   
   body{
-    overflow-x: hidden;
+    overflow-x: hidden !important;
   }
   ::-webkit-scrollbar {
     width: 12px;
@@ -220,7 +220,7 @@
       font-family: 'Syne';
   }
   
-  @mixin dFlex($jc: center, $ai: center, $g: 0px){ // default parameter: $ai: center ist standartmäßig immer auf center
+  @mixin dFlex($jc: center, $ai: center, $g: 0px){ 
     display: flex;
     justify-content: $jc;
     align-items: $ai;
@@ -229,5 +229,8 @@
   
   $blue: #5988FF;
 
-  // html, body { height: 100%; }
-  // body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+  @media (max-width: 1000px) {
+    .hideScollbar{
+      overflow: hidden;
+    }
+  }

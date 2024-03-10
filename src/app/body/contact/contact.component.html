@@ -14,7 +14,7 @@
                 </div>
             }
 
-        <input #email="ngModel" [(ngModel)]="contactData.email" type="email" id="email" name="email" placeholder="Your email.." required pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}" [ngClass]="{'clickedInput': email.valid && email.touched}">
+        <input #email="ngModel" [(ngModel)]="contactData.email" type="email" id="email" name="email" placeholder="Your email.." required pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+.[a-zA-Z]{2,}" [ngClass]="{'clickedInput': email.valid && email.touched}">
             @if (!email.valid && email.touched && !email.disabled) {
                 <div class="warningDiv">
                     <span class="warningText">Please enter your E-Mail.</span>

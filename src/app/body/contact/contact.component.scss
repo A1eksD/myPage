@@ -134,7 +134,6 @@ form {
     font-size: 24px;
     font-family: 'Overpass';
     transition: 0.3s ease-in-out;
-
 }
 
 .submitBtn[type=submit]{
@@ -269,6 +268,7 @@ form {
 
 @media (max-width: 660px) {
     .mainBox {
+        padding-top: 32px;
         h1 {
             font-size: 32px;
         }

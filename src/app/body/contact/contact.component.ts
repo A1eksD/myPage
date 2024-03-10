@@ -2,7 +2,7 @@ import { CommonModule } from '@angular/common';
 import { HttpClient } from '@angular/common/http';
 import { Component, inject } from '@angular/core';
 import { FormsModule, NgForm } from '@angular/forms';
-import { BrowserModule } from '@angular/platform-browser';
+
 
 @Component({
   selector: 'app-contact',
@@ -24,6 +24,8 @@ export class ContactComponent {
   unchecked = 'check_box_outline_blank.svg';
   checked = 'check_box.svg';
 
+  mailTest = false;
+
   checkIfAgree(){
     this.isChecked = !this.isChecked;
   }
@@ -35,11 +37,9 @@ export class ContactComponent {
     message: "",
   }
 
-  mailTest = true;
 
   post = {
-    endPoint: 'http://aleksanderdemyanovych.de/',
-    // endPoint: 'http://deineDomain.de/sendMail.php',
+    endPoint: 'https://aleksanderdemyanovych.de/myPage/sendMail.php',
     body: (payload: any) => JSON.stringify(payload),
     options: {
       headers: {
