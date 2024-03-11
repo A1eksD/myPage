@@ -12,11 +12,11 @@ import AOS from 'aos';
 export class ProjectsComponent {
   imgs =[ 'joinWallpaper.png', 'sharkieWallpaper2.png', 'pokedexWallpaper.png'];
   headline = ['Join', 'Sharkie', 'Pokedex'];
-  usedTechnics =['HTML | CSS | Javascript', 'HTML | CSS | Javascript', 'HTML | CSS | Javascript'];
+  usedTechnics =['HTML | CSS | JavaScript', 'HTML | CSS | JavaScript', 'HTML | CSS | JavaScript'];
   description = ['Task Manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories.',
                  'Play a little jump and run by helping little shark named Sharkie on his adventure.',
                  'Dive back in childhood and watch your favorite pokmons.'];
-  liveTest = ['https://aleksanderdemyanovych.de/Join/html/login.html','https://aleksanderdemyanovych.de/Sharkie/index.html','https://aleksanderdemyanovych.de/Pokedex/mainPAGE.html']
+  liveTest = ['https://aleksanderdemyanovych.de/Join/html/login.html','https://aleksanderdemyanovych.de/Sharkie/index.html','https://aleksanderdemyanovych.de/Pokedex/mainPAGE.html'];
   links = ['https://github.com/A1eksD/Join', 'https://github.com/A1eksD/Sharkie', 'https://github.com/A1eksD/my-Pokedex.git'];
   nrOfProject = [ 1, 2, 3];
 

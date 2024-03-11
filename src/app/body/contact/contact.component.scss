@@ -93,6 +93,35 @@ form {
     #message {
         @include inputStyle();
     }
+    .sendedMail{
+        font-family: 'Overpass';
+        color: rgb(0, 172, 0);
+        font-size: large;
+        animation: showSendedMail 0.2s ease-in-out forwards;
+        opacity: 0;
+    }
+    .hideSendedMail{
+        font-family: 'Overpass';
+        color: rgb(0, 172, 0);
+        font-size: large;
+        animation: hideSendMail 0.2s ease-in-out forwards;
+    }
+}
+  
+@keyframes showSendedMail {
+    100% {
+        opacity: 1;
+    }
+}
+  
+@keyframes hideSendMail {
+    0% {
+      opacity: 1;
+    }
+  
+    100% {
+      opacity: 0;
+    }
 }
 
 .clickedInput{

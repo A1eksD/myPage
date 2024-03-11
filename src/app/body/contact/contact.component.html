@@ -14,7 +14,7 @@
                 </div>
             }
 
-        <input #email="ngModel" [(ngModel)]="contactData.email" type="email" id="email" name="email" placeholder="Your email.." required pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+.[a-zA-Z]{2,}" [ngClass]="{'clickedInput': email.valid && email.touched}">
+        <input #email="ngModel" [(ngModel)]="contactData.email" type="email" id="email" name="email" placeholder="Your email.." required pattern="[^@]+@[^\.]+\..+" [ngClass]="{'clickedInput': email.valid && email.touched}">
             @if (!email.valid && email.touched && !email.disabled) {
                 <div class="warningDiv">
                     <span class="warningText">Please enter your E-Mail.</span>
@@ -37,8 +37,8 @@
                 I've read the <a href="legalNotice">privacy policy</a> and agree tho the prosessing of my data as outlinked</p>
         </div>
 
-        <input type="submit" value="Submit" class="aktivButton"  [ngClass]="{'submitBtn': isChecked && name.valid && message.valid&& email.valid }" [disabled]="!isChecked">
-
+        <input type="submit" value="Submit" class="aktivButton"  [ngClass]="{'submitBtn': isChecked && name.valid && message.valid&& email.valid}" [disabled]="!isChecked">
+        <p [ngClass]="{'sendedMail': sendedMail, 'hideSendedMail' : !sendedMail}">Email was send.</p>
 
     </form>
     <div class="positionImg">

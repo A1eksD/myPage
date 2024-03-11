@@ -26,6 +26,8 @@ export class ContactComponent {
 
   mailTest = false;
 
+  sendedMail = false;
+
   checkIfAgree(){
     this.isChecked = !this.isChecked;
   }
@@ -60,7 +62,12 @@ export class ContactComponent {
           error: (error) => {
             console.error(error);
           },
-          complete: () => console.info('send post complete'),
+          complete: () => {
+            this.sendedMail = true;
+            setTimeout(() => {
+              this.sendedMail = false;
+            }, 4000);
+          },
         });
     } else if (ngForm.submitted && ngForm.form.valid && this.mailTest) {
 

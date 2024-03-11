@@ -10,4 +10,19 @@ import { Component } from '@angular/core';
 })
 export class LandingpageComponent {
 
+  constructor(){
+    let isFadingOut = false;
+    window.addEventListener('scroll', () => {
+        const element = document.querySelector('.mainContainer') as HTMLElement;
+        const scrollPosition = window.scrollY;
+        
+        if (scrollPosition >= 300 && !isFadingOut) {
+            element.classList.add('fade-in-animation');
+            isFadingOut = true;
+        } else if (scrollPosition < 300 && isFadingOut) {
+            element.classList.remove('fade-in-animation');
+            isFadingOut = false;
+        }
+    });
+  }
 }

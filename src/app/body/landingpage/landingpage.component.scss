@@ -4,14 +4,14 @@
     @include dFlex();
     text-align: center;
     height: calc(100vh - 100px);
-    margin-top: 100px;
+    padding-top: 100px;
     width: 100vw;
     opacity: 1;
     transform-origin: bottom;
-    animation: fadeOut linear forwards;
-    animation-timeline: view();
-    animation-range: exit 100px;
     margin-bottom: 80px;
+    &.fade-in-animation {
+        animation: fadeOut  linear forwards;
+    }
     .headline {
         font-size: 110px;
         font-weight: 800;
@@ -43,9 +43,13 @@
 }
 
 @keyframes fadeOut {
-    to {
+    0% {
+        opacity: 1;
+        transform: scale(1);
+    }
+    100% {
         opacity: 0;
-        scale: 0.9;
+        transform: scale(0.9);
     }
 }
 
