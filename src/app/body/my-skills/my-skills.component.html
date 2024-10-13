@@ -1,13 +1,15 @@
 <div class="divHeight" id="mySkills">
-    <div class="mainBox">
-        <p class="fontSyne">My Skills</p>
-        <div class="positionIcons">
-            @for(img of iconImgs; let i = $index; track i;){
-                <div class="dFlex">
-                    <img class="iconImgs" src="assets/img/{{iconImgs[i]}}" alt="">
-                    <h3 class="fontOverpass">{{ iconText[i]}}</h3>
-                </div>
-            }
+    <div class="qhdWidth">
+        <div class="mainBox">
+            <p class="fontSyne" style="text-align: center;">{{ 'mySkills.mySkills' | translate }} Skills</p>
+            <div class="positionIcons">
+                @for(img of iconImgs; let i = $index; track i;){
+                    <div class="skillBox" data-aos="fade-up" data-aos-duration="2200">
+                        <img class="iconImgs" src="assets/img/{{iconImgs[i]}}" alt="">
+                        <h3 class="fontOverpass">{{ iconText[i]}}</h3>
+                    </div>
+                }
+            </div>
         </div>
     </div>
 </div>

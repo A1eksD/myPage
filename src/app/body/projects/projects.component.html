@@ -1,41 +1,49 @@
 <div class="mainBox" id="myProjects">
-    <div class="headline">
-        <h1 class="fontSyne">Portfolio</h1>
-        <span class="fontOverpass">Explore a selection of my work - please feel free to try them out.</span>
-    </div>
-  @for(img of imgs; let i = $index; track i;){
-    @if(i % 2 !== 0){
-      <div class="project rowReverse" data-aos="fade-left" data-aos-offset="300" data-aos-easing="ease-in-sine">
-        <img class="imgs" src="assets/img/{{ img }}" alt="" />
-        <div class="positionText fontOverpass">
-          <div class="positionNumverLeft"><p class="nrColor">{{ nrOfProject[i] }}</p><p>/3</p></div>
-          <div>
-            <h1 class="fontSyne">{{headline[i]}}</h1>
-            <h3>{{usedTechnics[i]}}</h3>
-            <span>{{ description[i] }}</span>
-          </div>
-          <div class="positionBtn">
-            <a href="{{ liveTest[i] }}" target="_blank" class="fontOverpass">Live Test</a>
-            <a href="{{ links[i] }}" target="_blank" class="fontOverpass">GitHUB</a>
+  <div class="maxWidth">
+      <div class="headline">
+          <h1 class="fontSyne">Portfolio</h1>
+          <span class="fontOverpass">{{ 'projects.spanDescription' | translate }}</span>
+      </div>
+      <div class="fileterOptionBox">
+        <span [ngStyle]="{'color': allPrj ? '#5988FF' : 'black'}" (click)="showAllProjects()">All</span> |
+        <span [ngStyle]="{'color': backPrj ? '#5988FF' : 'black'}" (click)="showBackProjects()">Backend</span> |
+        <span [ngStyle]="{'color': frontPrj ? '#5988FF' : 'black'}" (click)="showFrontProjects()">Frontend</span> 
+      </div>
+    @for(prj of filteredProjects; let i = $index; track i;){
+      @if(i % 2 !== 0){
+        <div class="project rowReverse" data-aos="fade-left" data-aos-offset="450" data-aos-easing="ease-in-sine">
+          <img class="imgs" src="assets/img/{{ prj.img }}" alt="" />
+          <div class="positionText fontOverpass">
+            <div class="positionNumverLeft" ><p class="nrColor">{{ i + 1 }}</p><p>/{{ getPrjAmoiunt() }}</p></div>
+            <div>
+              <h1 class="fontSyne">{{ prj.headline }}</h1>
+              <h3>{{ prj.usedTechnics }}</h3>
+              <span>{{ 'projects.description.' + prj.projectKeys | translate }}</span>
+            </div>
+            <div class="positionBtn">
+              <a href="{{ prj.liveTest }}" target="_blank" class="fontOverpass">Live Test</a>
+              <a href="{{ prj.link }}" target="_blank" class="fontOverpass">GitHUB</a>
+            </div>
           </div>
         </div>
-      </div>
-    } @else {
-      <div class="project" data-aos="fade-right" data-aos-offset="300" data-aos-easing="ease-in-sine">
-        <img class="imgs" src="assets/img/{{ img }}" alt="" />
-        <div class="positionText fontOverpass">
-          <div class="positionNumverRechts"><p class="nrColor">{{ nrOfProject[i] }}</p><p>/3</p></div>
-          <div>
-            <h1 class="fontSyne">{{headline[i]}}</h1>
-            <h3>{{usedTechnics[i]}}</h3>
-            <span>{{ description[i] }}</span>
-          </div>
-          <div class="positionBtn">
-            <a href="{{ liveTest[i] }}" target="_blank" class="fontOverpass">Live Test</a>
-            <a href="{{ links[i] }}" target="_blank" class="fontOverpass">GitHUB</a>
+      } @else {
+        <div class="project" data-aos="fade-right" data-aos-offset="450" data-aos-easing="ease-in-sine">
+          <img class="imgs" src="assets/img/{{ prj.img }}" alt="" />
+          <div class="positionText fontOverpass">
+            <div class="positionNumverRechts" [ngClass]="{positionNumverLeft: windowWidth <= 1400}"><p class="nrColor">{{ i + 1 }}</p><p>/{{ getPrjAmoiunt() }}</p></div>
+            <div>
+              <h1 class="fontSyne">{{ prj.headline }}</h1>
+              <h3>{{ prj.usedTechnics }}</h3>
+              <span>{{ 'projects.description.' + prj.projectKeys | translate }}</span>
+            </div>
+            <div class="positionBtn">
+              <a href="{{ prj.liveTest }}" target="_blank" class="fontOverpass">Live Test</a>
+              <a href="{{ prj.link }}" target="_blank" class="fontOverpass">GitHUB</a>
+            </div>
           </div>
         </div>
-      </div>
+      }
     }
-  }
+  </div>
 </div>
+

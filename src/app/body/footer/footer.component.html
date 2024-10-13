@@ -1,16 +1,18 @@
 <div class="mainBox">
-    <div class="iconAndName">
-        <a href="#landingpage" class="ADicon"></a>
-        <span>Demyanovych Aleksander 2024</span>
-    </div>
-
-
-    <div class="iconsPosition">
-        <div class="imgPosition">
-            @for (icon of icons; let i = $index; track i;) {
-                <a href="{{ links[i] }}" target="_blank"><img src="assets/img/{{ icon }}" alt=""></a>
-            }
+    <div class="qhdWidth">
+        <div class="iconAndName">
+            <a href="#landingpage" class="ADicon"></a>
+            <span>Demyanovych Aleksander 2024</span>
         </div>
-        <a href="legalNotice" class="legalNotice">Legal Notice</a>
+
+
+        <div class="iconsPosition">
+            <div class="imgPosition">
+                @for (icon of icons; let i = $index; track i;) {
+                    <a href="{{ links[i] }}" target="_blank"><img src="assets/img/{{ icon }}" alt=""></a>
+                }
+            </div>
+            <a routerLink="legalNotice" class="legalNotice">{{ 'footer.a' | translate }}</a>
+        </div>
     </div>
 </div>

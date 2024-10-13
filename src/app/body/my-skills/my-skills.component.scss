@@ -1,26 +1,27 @@
 @import './../../../styles.scss';
  
 .divHeight{
-    height: 100vh;
-    width: 100vw;
+    padding-top: 200px;
+    padding-bottom: 200px;
+    height: auto;
     @include dFlex();
+    .qhdWidth{
+        @include dFlex();
+        .div{
+            @include dFlex();
+        }
+    }
 }
 
 .mainBox{
-    margin: 8vw;
-    border: 3px black solid;
-    border-radius: 28px;
-    width: 82vw;
+    width: 64vw;
     height: auto;
     @include dFlex();
     flex-direction: column;
     p{
         font-size: 60px;
         font-weight: 800;
-        margin-top: -40px;
-        margin-bottom: 22px;
-        padding-left: 32px;
-        padding-right: 32px;
+        margin-bottom: 80px;
         background-color: white;
         transition: 0.3s ease-in-out;
         &:hover{
@@ -31,45 +32,48 @@
 }
 
 .positionIcons{
-    max-width: 94vw;
-    @include dFlex($jc: space-around, $g: 72px);
+    max-width: 900px;
+    @include dFlex($jc: space-around, $g: 32px);
     flex-wrap: wrap;
-    gap: 80px;
-    .dFlex{
-        @include dFlex();
-        flex-direction: column;
+    .skillBox{
+        @include dFlex($g: 22px);
+        background-color: #F9FAFB;
+        padding: 8px;
+        border-radius: 12px;
         .iconImgs{
-            width: 80px;
-            height: 90px;
+            width: 72px;
+            height: 72px;
             object-fit: contain;
-            margin-bottom: 12px;
-            filter: brightness(0) saturate(100%);
-            transition: 0.3s ease-in-out;
-            &:hover{
-                filter: none;
-                transition: 0.2s ease-in-out;
-            }
         }
         h3{
-            margin-bottom: 12px;
+            font-weight: 500;
         }
     }
 }
 
 @media (max-width: 1000px) {
+    .divHeight{
+        padding-top: 120px;
+    }
+
     .mainBox{
         p {
             font-size: 46px;
             margin-top: -32px;
+            padding-left: 8px;
+            padding-right: 8px;
         }
     }
 
     .positionIcons{
         @include dFlex($g: 26px);
-        .dFlex{
+        .skillBox{
             .iconImgs{
                 width: 46px;
                 height: 46px;
+            }
+            h3{
+                font-weight: 400;
             }
         }
     }
@@ -86,10 +90,42 @@
 
     .positionIcons{
         @include dFlex($g: 26px);
-        .dFlex{
+        .skillBox{
             .iconImgs{
                 width: 46px;
                 height: 46px;
+            }
+            h3{
+                display: none;
+            }
+        }
+    }
+}
+
+
+@media (min-width: 2161px) {
+    .divHeight{
+        @include dFlex();
+        min-width: 1920px;
+        .qhdWidth{
+            min-width: 1920px;
+            @include dFlex();
+        }
+    }
+    .mainBox{
+        width: 1920px;
+    }
+    .positionIcons{
+        @include dFlex($jc: space-around, $g: 80px);
+        flex-wrap: wrap;
+        .skillBox{
+            @include dFlex($g: 22px);
+            .iconImgs{
+                width: 88px;
+                height: 88px;
+            }
+            h3{
+                font-size: x-large;
             }
         }
     }

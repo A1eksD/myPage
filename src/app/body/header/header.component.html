@@ -1,18 +1,22 @@
+
 <div class="mainBox" id="header">
-    <img src="./assets/img/ADblack.svg" alt="AD Icon" class="adIcon">
-    <div>
-        <a href="#aboutMe">About me</a>
-        <a href="#mySkills">My skills</a>
-        <a href="#myProjects">My Projects</a>
-        <a href="#contact">Contact</a>
-        <img (click)="showSideMenu()" src="./assets/img/{{ showFiller? 'iconsX.png' : 'iconsMenu.png'}}" alt="iconsMenu" class="navBarIcon">
+    <div class="qhdWidth">
+        <img src="./assets/img/ADblack.svg" alt="AD Icon" class="adIcon">
+        <div>
+            <a href="#aboutMe">{{ 'header.aAboutMe' | translate }}</a>
+            <a href="#mySkills">{{ 'header.aSkills' | translate }} Skills</a>
+            <a href="#myProjects">{{ 'header.aProjects' | translate }}</a>
+            <a href="#contact">{{ 'header.aContact' | translate }}</a>
+            <img class="flag" src="./assets/img/{{ changeFlag? 'englandFlag.png' : 'germanyFlag.png' }}" alt="Flag" (click)="changeLanguages()">
+            <img (click)="showSideMenu()" src="./assets/img/{{ showFiller? 'iconsX.png' : 'iconsMenu.png'}}" alt="iconsMenu" class="navBarIcon">
+        </div>
     </div>
 </div>
 
 <div class="boxWithLinks" [ngClass]="{'closeNavB': !showFiller, 'showNavBar' : showFiller}">
-    <a class="navLink active" aria-current="page" href="#aboutMe" (click)="showSideMenu()">About Me</a>
-    <a class="navLink" href="#mySkills" (click)="showSideMenu()">My Skills</a>
-    <a class="navLink" href="#myProjects" (click)="showSideMenu()">Portfolio</a>
-    <a class="navLink" href="#contact"(click)="showSideMenu()">Contact</a>
+    <a class="navLink active" aria-current="page" href="#aboutMe" (click)="showSideMenu()">{{ 'header.navAboutMe' | translate }}</a>
+    <a class="navLink" href="#mySkills" (click)="showSideMenu()">{{ 'header.navSkills' | translate }} Skills</a>
+    <a class="navLink" href="#myProjects" (click)="showSideMenu()">{{ 'header.navProjects' | translate }}</a>
+    <a class="navLink" href="#contact"(click)="showSideMenu()">{{ 'header.navContact' | translate }}</a>
 </div>
 

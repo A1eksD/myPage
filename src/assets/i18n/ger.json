@@ -1,0 +1,47 @@
+{
+  "aboutMe": {
+    "h1": "Über mich",
+    "span1": "Hi, ich bin Aleksander Demyanovych, Full Stack Developer aus der Nähe von Trier, Deutschland. Mein Schwerpunkt liegt auf der Entwicklung moderner Webanwendungen mit Angular, Django und JavaScript. Durch zahlreiche Projekte habe ich praktische Erfahrung gesammelt und spezialisiere mich darauf, effiziente und skalierbare Lösungen zu entwickeln.",
+    "span2": "Dank meiner Fähigkeit, komplexe technische Herausforderungen zu analysieren und kreative Ansätze zu finden, kann ich in Ihrem Unternehmen wertvolle Unterstützung bieten. Mein Ziel ist es, durch innovative Lösungen echte Mehrwerte zu schaffen und Ihre Entwicklungsprojekte erfolgreich umzusetzen."
+  },
+  "contact": {
+    "h1": "Sage hallo!",
+    "h2": "Sie möchten ein neues Projekt angehen?",
+    "h3": "Dann lassen Sie uns über Ihre Ideen unterhalten und sie verwirklichen.",
+    "spanName": "Bitte geben Sie Ihren Namen ein.",
+    "spanEmail": "Bitte geben Sie Ihre E-Mail Adresse ein.",
+    "spanMessage": "Bitte geben Sie Ihre Nachricht ein.",
+    "pLegalNoticeP1": "Ich habe den Datenschutz gelesen",
+    "pLegalNoticeP2": "und stimme mit der Bewertung meiner Daten überein, wie verlinkt.",
+    "aLegalNotice": " Datenschutzbestimmungen ",
+    "pSendedMail": "E-Mail wurde erfolgreich versendet."
+  },
+  "footer": {
+    "a": "Impressum"
+  },
+  "header": {
+    "aContact": "Kontakt",
+    "aProjects": "Meine Projekte",
+    "aSkills": "Meine",
+    "aAboutMe": "Über mich",
+    "navContact": "Kontakt",
+    "navProjects": "Meine Projekte",
+    "navSkills": "Meine",
+    "navAboutMe": "Über mich"
+  },
+  "landingpage": {
+    "span": "Entwickler"
+  },
+  "mySkills": {
+    "mySkills": "Meine"
+  },
+  "projects": {
+    "spanDescription": "Entdecken Sie eine Auswahl meiner Projekte - probieren Sie sie ruhig aus.",
+    "description": {
+      "videoflix": "Eine vielseitige Videoplattform, auf der Sie Inhalte in verschiedenen Qualitätsstufen ansehen können. Egal, ob Sie neue Videos entdecken oder Ihre Lieblingsvideos genießen wollen - alles in einer benutzerfreundlichen Umgebung.",
+      "daBubble": "Chat-Messenger-App, inspiriert durch Slack und Discord. Bleiben Sie mit Ihren Kollegen in Kontakt und organisieren Sie die nächsten Schritte in Ihrem Unternehmen.",
+      "join": "Ein Aufgabenmanager nach dem Vorbild des Kanban-Systems. Erstellen und organisieren Sie ihre Aufgaben mit Drag & Drop-Funktionen und weisen Sie die Benutzer und Kategorien zu.",
+      "sharkie": "Spielen Sie ein kleines Jump and Run, indem Sie dem kleinen Hai namens Sharkie bei seinem Abenteuer helfen."
+    }
+  }
+}

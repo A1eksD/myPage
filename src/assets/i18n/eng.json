@@ -1,0 +1,48 @@
+{
+    "aboutMe":{
+        "h1":"About me",
+        "span1": "Hi, I'm Aleksander Demyanovych, Full Stack Developer from near Trier, Germany. My focus is on developing modern web applications with Angular, Django and JavaScript. Through numerous projects I have gained practical experience and specialize in developing efficient and scalable solutions.",
+        "span2": "Thanks to my ability to analyze complex technical challenges and find creative approaches, I can provide valuable support in your company. My goal is to create real added value through innovative solutions and to successfully implement your development projects."
+    },
+    "contact":{
+        "h1": "Say Hi!",
+        "h2": "Want to discuss a new project?",
+        "h3": "Then let's discuss your ideas and make it happen.",
+        "spanName": "Please enter your name.",
+        "spanEmail": "Please enter your E-Mail.",
+        "spanMessage": "Please enter your message.",
+        "pLegalNoticeP1": "I've read the",
+        "pLegalNoticeP2": "and agree tho the prosessing of my data as outlinked",
+        "aLegalNotice": " privacy policy ",
+        "pSendedMail": "Email was send."
+    },
+    "footer":{
+        "a": "Legal Notice"
+    },
+    "header":{
+        "aContact": "Contact",
+        "aProjects": "My Projects",
+        "aSkills": "My",
+        "aAboutMe": "About me",
+        "navContact": "Contact",
+        "navProjects": "My Projects",
+        "navSkills": "My",
+        "navAboutMe": "About me"
+    },
+    "landingpage":{
+        "span": "Developer"
+    },
+    "mySkills":{
+        "mySkills": "My"
+    },
+    "projects":{
+        "spanDescription": "Explore a selection of my work - please feel free to try them out.",
+        "description": {
+            "videoflix": "A versatile video platform that allows you to watch content in various quality levels. Whether you're discovering new videos or enjoying your favorite ones – all within a user-friendly environment.",
+            "daBubble" : "Chat-Messanger-App inspired by Slack and Discord. Keep in contact with your colleagues and organize the next steps in your company.",
+            "join" : "Task Manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories.",
+            "sharkie" : "Play a little jump and run by helping little shark named Sharkie on his adventure."
+        }
+    }
+    
+}

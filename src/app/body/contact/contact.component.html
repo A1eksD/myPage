@@ -1,15 +1,17 @@
 <div class="mainBox" id="contact">
-    <h1 class="fontSyne">Say Hi!</h1>
+    <div class="qhdWidth">
+        <h1 class="fontSyne">{{ 'contact.h1' | translate }}</h1>
+    </div>
     <form class="contactInputPosition" (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm">
         <div class="contactHeader">
-            <h2 class="fontOverpass">Want to discuss a new project?</h2>
-            <h3 class="fontOverpass">Then let's discuss your ideas and make it happen.</h3>
+            <h2 class="fontOverpass">{{ 'contact.h2' | translate }}</h2>
+            <h3 class="fontOverpass">{{ 'contact.h3' | translate }}</h3>
         </div>
 
         <input #name="ngModel" [(ngModel)]="contactData.name" type="text" id="name" name="name" placeholder="Your name.." required  [ngClass]="{'clickedInput': name.valid && name.touched}">
             @if (!name.valid && name.touched && !name.disabled) {
                 <div class="warningDiv">
-                    <span class="warningText">Please enter your name.</span>
+                    <span class="warningText">{{ 'contact.spanName' | translate }}</span>
                     <img class="warningIcon" src="assets/img/warning.svg" alt="">
                 </div>
             }
@@ -17,7 +19,7 @@
         <input #email="ngModel" [(ngModel)]="contactData.email" type="email" id="email" name="email" placeholder="Your email.." required pattern="[^@]+@[^\.]+\..+" [ngClass]="{'clickedInput': email.valid && email.touched}">
             @if (!email.valid && email.touched && !email.disabled) {
                 <div class="warningDiv">
-                    <span class="warningText">Please enter your E-Mail.</span>
+                    <span class="warningText">{{ 'contact.spanEmail' | translate }}</span>
                     <img class="warningIcon" src="assets/img/warning.svg" alt="">
                 </div>
             }
@@ -26,7 +28,7 @@
         <textarea #message="ngModel"  [(ngModel)]="contactData.message" id="message" name="message" placeholder="Write something.." style="height:200px" required [ngClass]="{'clickedInput': message.valid && message.touched}"></textarea>
             @if (!message.valid && message.touched && !message.disabled) {
                 <div class="warningDiv">
-                    <span class="warningText">Please enter your message.</span>
+                    <span class="warningText">{{ 'contact.spanMessage' | translate }}</span>
                     <img class="warningIcon" src="assets/img/warning.svg" alt="">
                 </div>
             } 
@@ -34,11 +36,11 @@
         
         <div class="privacyPosition">
             <p><img (click)="checkIfAgree()" id="checkIcon" src="assets/img/{{ isChecked? 'check_box.svg' : 'check_box_outline_blank.svg' }}">
-                I've read the <a href="legalNotice">privacy policy</a> and agree tho the prosessing of my data as outlinked</p>
+                {{ 'contact.pLegalNoticeP1' | translate }}<a routerLink="legalNotice">{{ 'contact.aLegalNotice' | translate }}</a>{{ 'contact.pLegalNoticeP2' | translate }}</p>
         </div>
 
         <input type="submit" value="Submit" class="aktivButton"  [ngClass]="{'submitBtn': isChecked && name.valid && message.valid&& email.valid}" [disabled]="!isChecked">
-        <p [ngClass]="{'sendedMail': sendedMail, 'hideSendedMail' : !sendedMail}">Email was send.</p>
+        <p [ngClass]="{'sendedMail': sendedMail, 'hideSendedMail' : !sendedMail}">{{ 'contact.pSendedMail' | translate }}</p>
 
     </form>
     <div class="positionImg">

@@ -1,14 +1,19 @@
 @import './../../../styles.scss';
 
 .mainBox {
-    @include dFlex($jc: space-evenly);
-    height: 100vh;
+    @include dFlex();
+    height: auto;
     width: 100vw;
-    .imgProfileMsmall {
-        max-width: 320px;
-        object-fit: contain;
-        border-radius: 20px;
-        box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+    padding-top: 200px;
+    padding-bottom: 200px;
+    .qhdWidth{
+        @include dFlex($jc: space-between);
+        .imgProfileMsmall {
+            max-width: 320px;
+            object-fit: contain;
+            border-radius: 20px;
+            box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+        }
     }
 }
 
@@ -17,7 +22,7 @@
     flex-direction: column;
     max-width: 40vw;
     height: auto;
-
+    margin-left: 100px;
     h1{
         font-size: 60px;
         font-weight: 800;
@@ -33,16 +38,27 @@
     }
 }
 
-@media (max-width: 1000px) {
+
+@media (max-width: 1440px) {
     .aboutMeBox {
+        margin: 0;
+        text-align: center;
+        display: flex;
+        align-items: center;
+        max-width: 80vw;
         h1{
             font-size: 46px;
         }
     }
 
     .mainBox {
-        .imgProfileMsmall {
-            max-width: 280px;
+        .qhdWidth{
+            @include dFlex();
+            flex-direction: column;
+            width: 100vw;
+            .imgProfileMsmall {
+                margin-bottom: 16px;
+            }
         }
     }
 }
@@ -51,18 +67,13 @@
     .mainBox {
         flex-direction: column;
         justify-content: center;
+        padding: 0;
+        padding-top: 10px;
     }
 
-
     .aboutMeBox {
-        margin-top: 12px;
-        max-width: 80vw;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
         h1{
-            font-size: 32px;
+            font-size: 26px;
             margin-bottom: 12px;
         }
         .aboutMeText{
@@ -71,9 +82,39 @@
     }
 
     .mainBox {
-        .imgProfileMsmall {
-            max-width: 200px;
-            margin-top: 50px;
+        .qhdWidth{
+            .imgProfileMsmall {
+                max-width: 200px;
+                margin-top: 50px;
+            }
+        }
+    }
+}
+
+@media (min-width: 2161px) {
+    .mainBox {
+        .qhdWidth{
+            @include dFlex($jc: space-between);
+            .imgProfileMsmall {
+                max-width: 420px;
+            }
+        }
+    }
+
+    .aboutMeBox {
+        h1{
+            font-size: 80px;
+        }
+        .aboutMeText{
+            font-size: xx-large;
+        }
+    }
+}
+
+@media (min-width: 2400px) {
+    .mainBox {
+        .qhdWidth{
+            min-width: 1920px;
         }
     }
 }

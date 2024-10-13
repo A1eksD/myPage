@@ -2,7 +2,7 @@
 
 
 .mainBox {
-  @include dFlex($jc: space-between);
+  @include dFlex();
   height: 100px;
   width: 100vw;
   position: fixed;
@@ -13,44 +13,54 @@
   left: 0;
   right: 0;
   z-index: 5;
-  .adIcon{
-    cursor: context-menu;
-  }
-  div {
-    min-width: 50vw;
-    @include dFlex($jc: space-evenly);
-    height: 80px;
-    a {
-      padding: 10px;
-      text-decoration: none;
-      color: black;
-      font-size: x-large;
-      font-family: 'Syne';
-      text-shadow: 0 0 2px white, 0 0 2px white, 0 0 2px white, 0 0 2px white;
-      &:hover {
-        box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.2);
-        border-radius: 30px;
+  .qhdWidth{
+    width: 100vw;
+    @include dFlex($jc: space-between);
+    .adIcon{
+      cursor: context-menu;
+    }
+    div {
+      min-width: 50vw;
+      @include dFlex($jc: space-evenly);
+      height: 80px;
+      a {
+        padding: 10px;
+        text-decoration: none;
+        color: black;
+        font-size: x-large;
+        font-family: 'Syne';
+        text-shadow: 0 0 2px white, 0 0 2px white, 0 0 2px white, 0 0 2px white;
+        &:hover {
+          box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.2);
+          border-radius: 30px;
+        }
+      }
+      .navBarIcon{
+        display: none;
+      }
+      .flag{
+        margin-right: 40px;
+        width: 40px;
+        height: 26px;
+        object-fit: cover;
+        border-radius: 5px;
+        box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px, rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px, rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px;
+        &:hover{
+          box-shadow: rgba(109, 191, 238, 0.63) 0px 0px 20px 4px;
+        }
       }
     }
-    .navBarIcon{
-      display: none;
+
+    p {
+      font-size: x-large;
+      font-weight: 900;
+      font-style: italic;
+      margin-left: 4vw;
     }
   }
-
-  p {
-    font-size: x-large;
-    font-weight: 900;
-    font-style: italic;
-    margin-left: 4vw;
-  }
 }
 
-img{
-  width: 56px;
-  height: 56px;
-  object-fit: cover;
-  margin-left: 5vw;
-}
+
 
 .example-container {
   width: 100%;
@@ -75,10 +85,11 @@ img{
 
 img{
   cursor: pointer;
-  width: 48px;
-  height: 48px;
+  width: 56px;
+  height: 56px;
   object-fit: contain;
   z-index: 40;
+  margin-left: 40px;
   transition: 0.3s ease-in-out;
 }
 
@@ -94,9 +105,9 @@ img{
   .navBarIcon{
     display: block !important;
     position: absolute;
-    right: 0;
+    right: 16px;
     cursor: pointer;
-    margin: 40px;
+
   }
 
   .navBar {
@@ -105,6 +116,20 @@ img{
 
   .mainBox{
     height: 60px;
+    .qhdWidth{
+      .adIcon{
+        cursor: context-menu;
+      }
+      div {
+        .flag{
+          position: absolute;
+          right: 80px;
+          width: 48px;
+          height: 32px;
+          margin-right: 40px;
+        }
+      }
+    }
   }
 
   .boxWithLinks{
@@ -116,7 +141,7 @@ img{
     position: fixed;
     bottom: 0;
     top: 60px;
-    height: calc(100vh - 60px);
+    height: calc(100dvh - 60px);
     width: 100vw;
     z-index: 10;
     background-color: rgba($color: #ffffff, $alpha: 0.1);
@@ -141,6 +166,18 @@ img{
         font-size: 42px;
     }
   } 
+  .mainBox{
+    .qhdWidth{
+      div {
+        .flag{
+          right: 64px;
+          width: 32px;
+          height: 24px;
+          margin: 0;
+        }
+      }
+    }
+  }
   img{
     width: 32px;
     height: 32px;
@@ -169,5 +206,36 @@ img{
 
   100% {
     transform: translateY(-110%);
+  }
+}
+
+
+@media (min-width: 2161px) {
+  .mainBox {
+    .qhdWidth{
+      max-width: 1920px;
+      @include dFlex($jc: space-between);
+      .adIcon{
+        cursor: context-menu;
+      }
+      div {
+        min-width: 50vw;
+        @include dFlex($jc: flex-end);
+        height: 80px;
+        a {
+          margin-left: 2vw;
+          font-size: xx-large;
+        }
+        .flag{
+          margin-left: 2vw;
+          margin-right: 0;
+          width: 64px;
+          height: 40px;
+        }
+      }
+    }
+  }
+  img{
+    margin: 0;
   }
 }

@@ -1,34 +1,40 @@
 @import './../../../styles.scss';
 
 .mainBox{
-    @include dFlex($jc: space-between);
+    @include dFlex();
     background-color: black;
     border: none;
     color: white;
     width: 100vw;
     height: 200px;
-    span{
-        font-size: larger;
-        font-family: 'Overpass'; 
-    }
-    .iconsPosition{
-        @include dFlex();
-        flex-direction: column;
-        margin: 5vw;
-        .imgPosition{
-            width: 220px;
-            @include dFlex($jc: space-evenly, $ai: center);
+    .qhdWidth{
+        width: 100vw;
+        height: 200px;
+        @include dFlex($jc: space-between);
+        span{
+            font-size: 24px;
+            font-family: 'Overpass'; 
         }
-        a{
-            margin-top: 40px;
-            font-size: larger;
-            font-family: 'Overpass';
-            text-decoration: none;
-            color: $blue;
-        }
-        .legalNotice{
-            &:hover{
-                filter: drop-shadow(0 0 0.75rem white);
+        .iconsPosition{
+            @include dFlex();
+            flex-direction: column;
+            margin: 5vw;
+            .imgPosition{
+                width: 220px;
+                @include dFlex($jc: space-evenly, $ai: center);
+            }
+            a{
+                margin-top: 20px;
+                font-size: 24px;
+                font-family: 'Overpass';
+                text-decoration: none;
+                color: $blue;
+            }
+            .legalNotice{
+                transition: 0.3s ease-in-out;
+                &:hover{
+                    filter: drop-shadow(0 0 0.75rem white);
+                }
             }
         }
     }
@@ -39,7 +45,7 @@ img {
     transition: transform 0.2s ease-in-out, filter 0.2s ease-in-out;
   
     &:hover {
-      transform: scale(1.5);
+      transform: scale(1.2);
       filter: drop-shadow(0 0 3px #4fbeff);
     }
 }
@@ -65,13 +71,58 @@ img {
     }
 }
 
-@media (max-width: 660px) {
+@media (max-width: 1000px) {
     .mainBox{
-        .iconsPosition{
-            .imgPosition{
-                width: 120px;
+        .qhdWidth{
+            span{
+                font-size: 20px;
+            }
+            .iconsPosition{
+                a{
+                    font-size: 20px;
+                }
             }
         }
     }
 }
 
+@media (max-width: 660px) {
+    .mainBox{
+        .qhdWidth{
+            .iconsPosition{
+                .imgPosition{
+                    width: 120px;
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: 2161px) {
+    .mainBox{
+        .qhdWidth{
+            max-width: 1920px;
+            span{
+                font-size: xx-large;
+                font-family: 'Overpass'; 
+            }
+            .iconsPosition{
+                margin-right: 0;
+                .imgPosition{
+                    @include dFlex($jc: space-between);
+                    width: 300px;
+                }
+                a{
+                    font-size: xx-large;
+                }
+            }
+        }
+    }
+    .iconAndName{
+        margin: 0;
+    }
+
+    img {
+        width: 48px;
+    }
+}

@@ -5,7 +5,7 @@
     text-align: center;
     width: 100vw;
     h1{
-        margin-top: 120px;
+        margin-top: 200px;
         font-size: 60px;
         font-weight: 800;
         transition: 0.3s ease-in-out;
@@ -18,22 +18,52 @@
 
 .mainBox{
     @include dFlex();
-    flex-direction: column;
     font-size: x-large;
     margin-bottom: 200px;
     width: 100vw;
-    .imgs{
-        box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
-        max-width: 440px;
-        max-height: 300px;
-        object-fit: contain;
-        border-radius: 10px;
+    .maxWidth{
+        @include dFlex();
+        flex-direction: column;
+        .imgs{
+            box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+            max-width: 440px;
+            max-height: 300px;
+            object-fit: contain;
+            border-radius: 10px;
+        }
+        .fileterOptionBox{
+            margin-top: 16px;
+            cursor: pointer;
+            font-family: "Syne";
+            @include dFlex($g: 26px);
+            span{
+                position: relative;
+                &::after {
+                    content: "";
+                    position: absolute;
+                    left: 0;
+                    bottom: 0;
+                    width: 0;
+                    height: 3px;
+                    background: linear-gradient(90deg, #bdbdbd, #63c1ff);
+                    transition: width 0.5s ease-in-out;
+                }
+                &:hover::after {
+                    width: 100%;
+                }
+            
+                &:not(:hover)::after {
+                  right: 0;
+                  left: auto;
+                }
+           }
+        }
     }
 }
 
 .project{
-    @include dFlex($ai: flex-start);
-    width: 80vw;
+    @include dFlex($jc: space-between, $ai: flex-start);
+    width: 72vw;
     margin-top: 120px;
     .positionText{
         margin: 40px;
@@ -65,6 +95,7 @@
     }
     h1{
         margin: 0;
+        margin-top: -22px;
     }
     h3{
         color: $blue;
@@ -75,7 +106,7 @@
 a{
     padding: 24px;
     padding-top: 16px;
-    padding-bottom: 16px;
+    padding-bottom: 12px;
     text-decoration: none;
     border-radius: 30px;
     border: 1px rgba(0, 0, 0, 0.2) solid;
@@ -94,7 +125,7 @@ a{
 }
 
 
-@media (max-width: 1300px) {
+@media (max-width: 1400px) {
     .dRow{
         display: flex;
         align-items: flex-start;
@@ -159,12 +190,23 @@ a{
         span{
             font-size: 16px;
             text-align: center;
+            margin-left: 8px;
+            margin-right: 8px;
         }
     }
 
     .mainBox{
-        .imgs{
-            max-width: 280px;
+        .maxWidth{
+            .imgs{
+                max-width: 280px;
+            }
+            .fileterOptionBox{
+                @include dFlex($g: 12px);
+                span{
+                    font-size: large;
+                }
+
+            }
         }
     }
 
@@ -201,4 +243,43 @@ a{
         text-decoration: none;
         margin: 8px;
     }
+}
+
+@media (min-width: 2161px) {
+    .mainBox{
+        .maxWidth{
+            max-width: 1920px;
+            .imgs{
+                max-width: 560px;
+                max-height: 340px;
+                object-fit: contain;
+            }
+        }
+    }
+    .project{
+        max-width: 1920px;
+        .positionText{
+            .positionNumverRechts{
+                top: -32px;
+            }
+            .positionNumverLeft{
+                top: -32px;
+            }
+        }
+        .positionBtn{
+            margin: 0;
+            margin-top: 34px;
+        }
+        h1{
+            font-size: 48px;
+            margin-bottom: 16px;
+        }
+        h3{
+            font-size: 32px;
+        }
+        span{
+            font-size: 26px;
+        }
+    }
+
 }
