@@ -1,8 +1,8 @@
 {
     "aboutMe":{
         "h1":"About me",
-        "span1": "Hi, I'm Aleksander Demyanovych, Full Stack Developer from near Trier, Germany. My focus is on developing modern web applications with Angular, Django and JavaScript. Through numerous projects I have gained practical experience and specialize in developing efficient and scalable solutions.",
-        "span2": "Thanks to my ability to analyze complex technical challenges and find creative approaches, I can provide valuable support in your company. My goal is to create real added value through innovative solutions and to successfully implement your development projects."
+        "span1": "Hi, I'm Aleksander Demyanovych, Full Stack Developer from near Trier, Germany. My focus is on the development of modern web applications in the field of business applications. I use JavaScript / Angular in the frontend and Python / Django in the backend to bring the projects to life. The resulting practical experience is reflected in the efficiency and scalability of the projects.",
+        "span2": "I have the ability to analyze technical challenges and develop creative solutions. I not only want to contribute my skills to your company, but also actively work on making your projects more efficient. My goal is to create real added value through customized approaches and thus increase the success of your products."
     },
     "contact":{
         "h1": "Say Hi!",
@@ -36,6 +36,7 @@
         "mySkills": "My"
     },
     "projects":{
+        "allProjects": "All",
         "spanDescription": "Explore a selection of my work - please feel free to try them out.",
         "description": {
             "videoflix": "A versatile video platform that allows you to watch content in various quality levels. Whether you're discovering new videos or enjoying your favorite ones – all within a user-friendly environment.",

@@ -14,7 +14,7 @@ import { forkJoin } from 'rxjs';
 })
 export class HeaderComponent {
   showFiller = false;
-  changeFlag = true;
+  changeFlag = false;
 
   
   showSideMenu() {

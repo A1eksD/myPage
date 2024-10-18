@@ -36,10 +36,11 @@
     @include dFlex($jc: space-around, $g: 32px);
     flex-wrap: wrap;
     .skillBox{
-        @include dFlex($g: 22px);
+        @include dFlex($jc: space-around);
         background-color: #F9FAFB;
         padding: 8px;
         border-radius: 12px;
+        width: 180px;
         .iconImgs{
             width: 72px;
             height: 72px;
@@ -68,6 +69,8 @@
     .positionIcons{
         @include dFlex($g: 26px);
         .skillBox{
+            @include dFlex($jc: space-around, $g: 8px);
+            width: 148px;
             .iconImgs{
                 width: 46px;
                 height: 46px;
@@ -78,6 +81,7 @@
         }
     }
 }
+
 @media (max-width: 660px) {
     .mainBox{
         p {
@@ -91,6 +95,8 @@
     .positionIcons{
         @include dFlex($g: 26px);
         .skillBox{
+            @include dFlex($g: 0);
+            width: auto;
             .iconImgs{
                 width: 46px;
                 height: 46px;
@@ -116,10 +122,11 @@
         width: 1920px;
     }
     .positionIcons{
-        @include dFlex($jc: space-around, $g: 80px);
+        @include dFlex($jc: space-around, $g: 32px);
         flex-wrap: wrap;
         .skillBox{
-            @include dFlex($g: 22px);
+            width: 230px;
+            @include dFlex($jc: space-around, $g: 0);
             .iconImgs{
                 width: 88px;
                 height: 88px;

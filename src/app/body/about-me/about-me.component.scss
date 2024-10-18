@@ -39,6 +39,14 @@
 }
 
 
+@media (max-width: 1800px) {
+    .aboutMeBox {
+        .aboutMeText{
+            font-size: large;
+        }
+    }
+}
+
 @media (max-width: 1440px) {
     .aboutMeBox {
         margin: 0;
@@ -77,7 +85,7 @@
             margin-bottom: 12px;
         }
         .aboutMeText{
-            font-size: large;
+            font-size: medium;
         }
     }
 
@@ -101,20 +109,21 @@
         }
     }
 
-    .aboutMeBox {
-        h1{
-            font-size: 80px;
-        }
-        .aboutMeText{
-            font-size: xx-large;
-        }
-    }
 }
 
 @media (min-width: 2400px) {
     .mainBox {
         .qhdWidth{
             min-width: 1920px;
+        }
+    }
+
+    .aboutMeBox {
+        h1{
+            font-size: 80px;
+        }
+        .aboutMeText{
+            font-size: xx-large;
         }
     }
 }

@@ -5,7 +5,7 @@
           <span class="fontOverpass">{{ 'projects.spanDescription' | translate }}</span>
       </div>
       <div class="fileterOptionBox">
-        <span [ngStyle]="{'color': allPrj ? '#5988FF' : 'black'}" (click)="showAllProjects()">All</span> |
+        <span [ngStyle]="{'color': allPrj ? '#5988FF' : 'black'}" (click)="showAllProjects()">{{ 'projects.allProjects' | translate }}</span> |
         <span [ngStyle]="{'color': backPrj ? '#5988FF' : 'black'}" (click)="showBackProjects()">Backend</span> |
         <span [ngStyle]="{'color': frontPrj ? '#5988FF' : 'black'}" (click)="showFrontProjects()">Frontend</span> 
       </div>
