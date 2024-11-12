@@ -1,8 +1,8 @@
 {
   "aboutMe": {
     "h1": "Über mich",
-    "span1": "Hi, ich bin Aleksander Demyanovych, Full Stack Developer aus der Nähe von Trier, Deutschland. Mein Schwerpunkt liegt auf der Entwicklung moderner Webanwendungen im Bereich Business-Applikationen. Dafür nutze ich JavaScript / Angular im Frontend und Python / Django im Backend, um die Projekte zum Leben zu erwecken. Die dadurch errungene praktische Erfahrung spiegelt sich bei den Projekten in der Effizienz und Skalierbarkeit wider.",
-    "span2": "Ich bringe die Fähigkeit mit, technische Herausforderungen zu analysieren und kreative Lösungen zu entwickeln. In Ihrem Unternehmen möchte ich nicht nur meine Fähigkeiten einbringen, sondern auch aktiv daran arbeiten, Ihre Projekte effizienter zu gestalten. Mein Ziel ist es, durch maßgeschneiderte Ansätze echten Mehrwert zu schaffen und damit den Erfolg Ihrer Produkte zu steigern."
+    "span1": "Hi, ich bin Aleksander Demyanovych, Full Stack Developer aus der Nähe von Trier, Deutschland. Meine Leidenschaft liegt auf der Entwicklung moderner Webanwendungen im Bereich Business-Applikationen. Dafür fokusiere ich mich auf als JavaScript / Angular im Frontend und Python / Django im Backend. Die errungene praktische Erfahrung spiegelt sich bei den Projekten in der Effizienz und Skalierbarkeit wieder.",
+    "span2": "Ich bringe die Fähigkeit mit, technische Herausforderungen zu analysieren und kreative Lösungen zu entwickeln. Mein Ziel ist es in Ihrem Unternemebem maßgeschneiderte Ansätze zu schaffen und damit den Erfolg Ihrer Produkte zu steigern."
   },
   "contact": {
     "h1": "Sage hallo!",
